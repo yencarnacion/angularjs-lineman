@@ -1,0 +1,41 @@
+.main {
+  margin-top: 60px;
+}
+
+.nav h3 {
+  display: inline;
+  vertical-align: middle;
+}
+
+.table {
+  font-size: 16px;
+}
+.table th {
+  font-weight: bold;
+}
+.table th a {
+  color: #000000;
+}
+
+.header {
+  border: 1px solid red;
+}
+
+.headline {
+  padding: 0px;
+  margin: 0px;
+}
+
+.byline {
+  padding: 10px;
+  margin: 0px;
+}
+
+.errors {
+  border: 1px solid #a94442;
+  border-radius: 4px;
+  color: #a94442;
+}
+.errors li {
+  padding: 10px;
+}

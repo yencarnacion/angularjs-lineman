@@ -1,0 +1,5 @@
+[
+      { "action": "Comprar Pan", "done": false},
+      { "action": "Comprar Gatorade", "done": false},
+      { "action": "Cobrar Victor", "done": false}
+]
