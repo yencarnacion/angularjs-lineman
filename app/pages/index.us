@@ -8,6 +8,7 @@
   <body ng-controller="sportsStoreCtrl">
     <div class="navbar navbar-inverse">
       <a class="navbar-brand" href="#">SPORTS STORE</a>
+      <cart-summary />
     </div>
 
     <div class="alert alert-danger" ng-show="data.error">
@@ -15,9 +16,7 @@
       <a href="/index.html" class="alert-link">Click here to try again</a>
     </div>
 
-
-    <div ng-include=" 'views/productList.html' "></div>
-
+    <ng-view />
 
   </body>
 </html>

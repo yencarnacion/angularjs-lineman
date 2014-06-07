@@ -1,4 +1,4 @@
-angular.module("app", ["customFilters"]);
+angular.module("app", ["customFilters", "cart", "ngRoute"]);
 
 angular.module("app")
 .constant("dataUrl", "http://localhost:8000/api/products")
