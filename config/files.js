@@ -18,8 +18,6 @@ module.exports = function(lineman) {
       ],
         app: [
           "app/js/app.js",
-          "app/js/routes.js",
-          "app/js/sportsStore.js",
           "app/js/**/*.js"
         ]
     }
