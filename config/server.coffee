@@ -63,6 +63,9 @@ module.Products = [
   }
 ]
 
+module.Orders = [
+]
+
 module.Users = [
   {
     id: 1
@@ -156,3 +159,29 @@ module.exports =
 
     app.post '/api/products', (req, res) ->
       res.json(module.DB.create("Products", req.body))
+
+    app.get '/api/orders', (req, res) ->
+      res.json(module.Orders)
+
+    app.get '/api/orders/:id', (req, res) ->
+      order = module.DB.find("Orders", parseInt(req.params.id))
+      if product?
+        res.json(order)
+
+    app.put '/api/orders/:id', (req, res) ->
+      order = module.DB.find("Orders", parseInt(req.params.id))
+      for key, value of req.body
+        order[key] = value
+
+      console?.log "order", JSON.stringify(order)
+      if order?
+        res.json(order)
+      else
+        res.json(404, {error: "Order not found."})
+
+    app.delete '/api/orders/:id', (req, res) ->
+      obj = module.DB.destroy("Orders", parseInt(req.params.id))
+      res.json(obj)
+
+    app.post '/api/orders', (req, res) ->
+      res.json(module.DB.create("Orders", req.body))
